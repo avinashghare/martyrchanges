@@ -1563,6 +1563,166 @@ class Site extends CI_Controller
 		$this->load->view("redirect",$data);
 	}
 	
-	
+	//walloffame
+    
+    public function viewwalloffame()
+    {
+        $access=array("1");
+        $this->checkaccess($access);
+        $data["page"]="viewwalloffame";
+        $data["base_url"]=site_url("site/viewwalloffamejson");
+        $data["title"]="View walloffame";
+        $this->load->view("template",$data);
+    }
+    function viewwalloffamejson()
+    {
+        $elements=array();
+        
+        $elements[0]=new stdClass();
+        $elements[0]->field="`walloffame`.`id`";
+        $elements[0]->sort="1";
+        $elements[0]->header="ID";
+        $elements[0]->alias="id";
+        
+        $elements[1]=new stdClass();
+        $elements[1]->field="`walloffame`.`deed`";
+        $elements[1]->sort="1";
+        $elements[1]->header="Deed";
+        $elements[1]->alias="deed";
+        
+        $elements[2]=new stdClass();
+        $elements[2]->field="`walloffame`.`name`";
+        $elements[2]->sort="1";
+        $elements[2]->header="Name";
+        $elements[2]->alias="name";
+        
+        $elements[3]=new stdClass();
+        $elements[3]->field="`walloffame`.`status`";
+        $elements[3]->sort="1";
+        $elements[3]->header="Status";
+        $elements[3]->alias="status";
+        
+        $elements[4]=new stdClass();
+        $elements[4]->field="`walloffame`.`timestamp`";
+        $elements[4]->sort="1";
+        $elements[4]->header="Timestamp";
+        $elements[4]->alias="timestamp";
+        
+        $search=$this->input->get_post("search");
+        $pageno=$this->input->get_post("pageno");
+        $orderby=$this->input->get_post("orderby");
+        $orderorder=$this->input->get_post("orderorder");
+        $maxrow=$this->input->get_post("maxrow");
+        
+        if($maxrow=="")
+        {
+            $maxrow=20;
+        }
+        if($orderby=="")
+        {
+            $orderby="id";
+            $orderorder="ASC";
+        }
+        $data["message"]=$this->chintantable->query($pageno,$maxrow,$orderby,$orderorder,$search,$elements,"FROM `walloffame`");
+        $this->load->view("json",$data);
+    }
+
+    public function createwalloffame()
+    {
+        $access=array("1");
+        $this->checkaccess($access);
+        $data["page"]="createwalloffame";
+        $data["title"]="Create walloffame";
+        $data["status"]=$this->walloffame_model->getwalloffamestatusdropdown();
+        $this->load->view("template",$data);
+    }
+    public function createwalloffamesubmit() 
+    {
+        $access=array("1");
+        $this->checkaccess($access);
+        $this->form_validation->set_rules("status","Status","trim");
+        $this->form_validation->set_rules("name","Name","trim");
+        $this->form_validation->set_rules("deed","Deed","trim");
+        if($this->form_validation->run()==FALSE)
+        {
+            $data["alerterror"]=validation_errors();
+            $data["page"]="createwalloffame";
+            $data["title"]="Create walloffame";
+            $data["status"]=$this->walloffame_model->getwalloffamestatusdropdown();
+            $this->load->view("template",$data);
+        }
+        else
+        {
+            $status=$this->input->get_post("status");
+            $name=$this->input->get_post("name");
+            $deed=$this->input->get_post("deed");
+            if($this->walloffame_model->create($name,$deed,$status)==0)
+                $data["alerterror"]="New walloffame could not be created.";
+            else
+                $data["alertsuccess"]="walloffame created Successfully.";
+            $data["redirect"]="site/viewwalloffame";
+            $this->load->view("redirect",$data);
+        }
+    }
+    public function editwalloffame()
+    {
+        $access=array("1");
+        $this->checkaccess($access);
+        $data["page"]="editwalloffame";
+        $data["title"]="Edit walloffame";
+        $data["status"]=$this->walloffame_model->getwalloffamestatusdropdown();
+        $data["before"]=$this->walloffame_model->beforeedit($this->input->get("id"));
+        $this->load->view("template",$data);
+    }
+    public function editwalloffamesubmit()
+    {
+        $access=array("1");
+        $this->checkaccess($access);
+        $this->form_validation->set_rules("id","ID","trim");
+        $this->form_validation->set_rules("status","Status","trim");
+        $this->form_validation->set_rules("name","Name","trim");
+        $this->form_validation->set_rules("deed","Deed","trim");
+        if($this->form_validation->run()==FALSE)
+        {
+            $data["alerterror"]=validation_errors();
+            $data["page"]="editwalloffame";
+            $data["title"]="Edit walloffame";
+            $data["subcategory"]=$this->navigation_model->getsubcategorydropdown();
+            $data["before"]=$this->walloffame_model->beforeedit($this->input->get_post("id"));
+            $this->load->view("template",$data);
+        }
+        else
+        {
+            $id=$this->input->get_post("id");
+            $status=$this->input->get_post("status");
+            $name=$this->input->get_post("name");
+            $deed=$this->input->get_post("deed");
+            if($this->walloffame_model->edit($id,$name,$deed,$status)==0)
+                $data["alerterror"]="New walloffame could not be Updated.";
+            else
+                $data["alertsuccess"]="walloffame Updated Successfully.";
+            $data["redirect"]="site/viewwalloffame";
+            $this->load->view("redirect",$data);
+        }
+    }
+    public function deletewalloffame()
+    {
+        $access=array("1");
+        $this->checkaccess($access);
+        $this->walloffame_model->delete($this->input->get("id"));
+        $data["redirect"]="site/viewwalloffame";
+        $this->load->view("redirect",$data);
+    }
+    
+	function changewalloffamestatus()
+	{
+		$access = array("1");
+		$this->checkaccess($access);
+		$this->walloffame_model->changewalloffamestatus($this->input->get('id'));
+		$data['alertsuccess']="Status Changed Successfully";
+        $data['redirect']="site/viewwalloffame";
+        $this->load->view("redirect",$data);
+	}
+    
 }
 ?>
