@@ -94,5 +94,24 @@ class Website extends CI_Controller
 //            $data["page"]="details";
 //            $this->load->view("frontend",$data);
         }
+    public function bricks()
+    {
+        $data["page"]="bricks";
+//        $data["category"]=$this->category_model->getcategorytree(0);
+//        print_r($data["category"]);
+        $this->load->view("frontend",$data);
+    }
+    public function deed()
+    {
+        $data["page"]="deed";
+//        $data["category"]=$this->category_model->getcategorytree(0);
+//        print_r($data["category"]);
+        $this->load->view("frontend",$data);
+    }
+    public function deeddet()
+    {
+        $data["page"]="deeddet";
+        $this->load->view("frontend",$data);
+    }
 }
 ?>

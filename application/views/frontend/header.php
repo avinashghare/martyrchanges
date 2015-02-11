@@ -20,8 +20,11 @@
         <link rel="stylesheet" type="text/css" href="<?php echo base_url('frontassets/css/noJS.css'); ?>" />
     </noscript>
     <script src="<?php echo base_url('frontassets/js/modernizr.custom.97074.js'); ?>"></script>
+     <script src="<?php echo base_url('frontassets/js/masonry.pkgd.js'); ?>"></script>
+     <script src="<?php echo base_url('frontassets/js/masonry.pkgd.min.js'); ?>"></script>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+ 
 <!--    <link rel="stylesheet" href="css/main.css">-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
     <script src="<?php echo base_url("frontassets");?>/js/jquery-1.11.1.min.js"></script>
@@ -36,6 +39,7 @@
     </style>
     <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Neuton:300,400,700|Neucha|Raleway:400,500,300,600,200,100,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
 
     <!--[if IE]>
         <script src="https://cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>

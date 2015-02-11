@@ -2,11 +2,12 @@
 
 font-family:'chunkfive';
  src:url(Chunkfive.otf);
-
+/*font-family: 'Indie Flower', cursive;*/
+    font-family: 'Shadows Into Light', cursive;
 }
 body {
     font: 15px/150%"MyriadPro-Regular";
-    font-family: 'PT Sans', 'chunkfive', sans-serif;
+    font-family: 'PT Sans', 'chunkfive', 'chalk','Indie Flower', cursive, sans-serif;
     word-wrap: break-word;
     color: #000;
 }
@@ -798,4 +799,60 @@ text-decoration:none;
 }
 .paly-btn a{
 cursor:pointer;
+}
+.brick{
+    /* background: url("../image/brick.jpg") no-repeat center center; */
+    background-size: cover;
+    height: 600px;
+}
+.sigle-brick ul li {
+    list-style: none;
+    display: inline;
+    color: #fff;
+    /* background: transparent; */
+    border: 4px solid rgb(213, 213, 213);
+    padding: 7px 20px 7px 20px;
+    font-size: 14px;
+    text-transform: capitalize;
+    font-family: pt sans;
+    /* margin: 27px auto !important; */
+    text-align: center;
+    margin: 0px -5px;
+    background: url("../image/brick.jpg") no-repeat center center;
+    line-height: 37px;
+}
+.sigle-brick{
+ background: url("../image/brick.jpg") no-repeat center center;
+   background-size: cover;
+position: absolute;
+top: 40px;
+left: 32px;
+width: auto;
+border: 4px solid rgb(213, 213, 213);
+
+}
+.item { 
+    display: inline-block;
+    background: url("../image/brick.jpg")fixed center;
+    border: 2px solid #A7A7A7;
+    padding: 10px 47px;
+    margin: 0px -4px;
+ 
+color:#fff;
+    text-transform: capitalize;
+    font-family: indie flower;
+    font-weight: bold;
+    text-align: center;
+    line-height: 27px;
+    font-size: 17px;
+}
+
+.wall{
+ background: url("../image/brick.jpg") no-repeat center center;
+   
+ background-size: cover;
+    
+ height: auto;
+ border: 1px solid #000;
+ width: auto !important;
 }
