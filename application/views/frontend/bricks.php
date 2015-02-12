@@ -26,117 +26,42 @@
     </div>
 </div>
 <div class="regiment-backs">
-<!--
-<div class="wall">
+   
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <ul>
-                            <li>* Demo name Demo name</li>
-                            <li>* Demo name</li>
-                            <li>* Demo name Demo name</li>
-                            <li>* Demo name</li>
-                            <li>* Demo name</li>
-                            <li>* Demo name</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
--->
-    <div class="container">
-        <div class="row">
-           <div class="col-md-12">
-            <div id="container" class="wall">
-                <div class="item">demo name demo name</div>
-                 <div class="item">demo name demo name  demo name </div>
-                  <div class="item">demo name</div>
-                <div class="item">demo name</div>
-                  <div class="item">demo name demo name</div>
-                   <div class="item">demo name demo name</div>
+                <div id="container" class="wall">
+                    <a href="#">
+                        <div class="item">demo name demo name</div>
+                    </a>
+                    <div class="item">demo name demo name demo name</div>
+                    <div class="item">demo name</div>
+                    <div class="item">demo name</div>
                     <div class="item">demo name demo name</div>
-                     <div class="item">demo name demo name</div>
-                <div class="item">demo name demo name</div>
-               
-                <div class="item">demo name demo name</div>
-                <div class="item">demo name demo name</div>
-                <div class="item">demo name</div>
-                <div class="item">demo name</div>
-               
-                <div class="item">demo name</div>
-                <div class="item">demo name</div>
-               
-            </div>
-           </div>
-        </div>
-    </div>
-    <!--
-    <div class="container">
+                    <div class="item">demo name demo name</div>
+                    <div class="item">demo name demo name</div>
+                    <div class="item">demo name demo name</div>
+                    <div class="item">demo name demo name</div>
 
-        <div class="row">
-            <div class="col-md-12">
-                <div class="brick">
-                    <div class="sigle-brick">
-                        <ul>
-                            <li>Demo name Demo name</li>
-                            <li>Demo name</li>
-                            <li>Demo name Demo name</li>
-                            <li>Demo name</li>
-                            <li>Demo name</li>
-                            <li>Demo name</li>
-                            <li>Demo name</li>
-                            <li>Demo name name</li>
-                            <li>Demo name</li>
-                            <li>Demo name Demo name</li>
-                            <li>Demo name</li>
-                            <li>Demo name</li>
-                            <li>Demo name</li>
-                            <li>Demo name</li>
-                            <li>Demo name Demo name</li>
-                            <li>Demo name</li>
-                            <li>Demo name Demo name</li>
-                            <li>Demo name</li>
-                            <li>Demo name</li>
-                            <li>Demo name Demo name</li>
-                            <li>Demo name</li>
-                            <li>Demo name Demo name</li>
-                            <li>Demo name Demo name</li>
-                            <li>Demo name</li>
-                            <li>Demo name Demo name</li>
-                            <li>Demo name</li>
-                            <li>Demo name</li>
-                            <li>Demo name</li>
-                            <li>Demo name</li>
-                            <li>Demo name name</li>
-                            <li>Demo name</li>
-                            <li>Demo name Demo name</li>
-                            <li>Demo name</li>
-                            <li>Demo name</li>
-                            <li>Demo name</li>
-                            <li>Demo name</li>
-                            <li>Demo name Demo name</li>
-                            <li>Demo name</li>
-                            <li>Demo name Demo name</li>
-                            <li>Demo name</li>
-                            <li>Demo name</li>
-                            <li>Demo name Demo name</li>
-                            <li>Demo name</li>
-                            <li>Demo name Demo name</li>
+                    <div class="item">demo name demo name</div>
+                    <div class="item">demo name demo name</div>
+                    <div class="item">demo name</div>
+                    <div class="item">demo name</div>
 
-                        </ul>
+                    <div class="item">demo name</div>
+                    <div class="item">demo name</div>
 
-                    </div>
                 </div>
             </div>
         </div>
-
     </div>
--->
 
 </div>
-           <div class="detail-btn text-center" style="margin-top:50px;">
-           <a href="deed.php"><button type="button" class="btns">Add Deed</button></a> 
-                
+<div class="detail-btn text-center" style="margin-top:50px;">
+    <a href="deed.php">
+        <button type="button" class="btns">Add Deed</button>
+    </a>
 
-               </div>
+
+</div>
 </div>
