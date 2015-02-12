@@ -93,6 +93,13 @@ class Walloffame_model extends CI_Model
     }
     
     
+    public function getwalloffamebyid($id)
+    {
+        $query=$this->db->query("SELECT * FROM `walloffame` WHERE `id`='$id'")->row();
+        return $query;
+    }
+    
+    
     
 	public function getwalloffamebycategory($id)
 	{
@@ -121,5 +128,19 @@ ORDER BY `walloffame`.`order`")->result();
         return $status;
     }
     
+    public function adddeed($name,$deed)
+    {
+        $data=array(
+            "name" => $name,
+            "deed" => $deed,
+            "status" => 0
+        );
+        $query=$this->db->insert( "walloffame", $data );
+        $id=$this->db->insert_id();
+        if(!$query)
+        return  0;
+        else
+        return  $id;
+    }
 }
 ?>

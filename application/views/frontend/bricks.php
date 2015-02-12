@@ -16,34 +16,13 @@
     <div class="row">
         <div class="col-md-12">
             <div class="links ">
-                <!--                  <a href="index.html">Home</a>|<a href="regiments.html">Regiments</a>|<a href="detail.html">Martyr Detail</a>-->
-
-
-                <a href="<?php echo site_url('website/index');?>">Home</a>|<a href="#">Fame</a>
+                <a href="<?php echo site_url('website/index');?>">Home</a>|<a href="<?php echo site_url('website/bricks');?>">Fame</a>
 
             </div>
         </div>
     </div>
 </div>
 <div class="regiment-backs">
-<!--
-<div class="wall">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <ul>
-                            <li>* Demo name Demo name</li>
-                            <li>* Demo name</li>
-                            <li>* Demo name Demo name</li>
-                            <li>* Demo name</li>
-                            <li>* Demo name</li>
-                            <li>* Demo name</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
--->
     <div class="container">
         <div class="row">
            <div class="col-md-12">
@@ -56,95 +35,15 @@
                 <?php 
                 }
                 ?>
-<!--
-                 <div class="item">demo name demo name  demo name </div>
-                  <div class="item">demo name</div>
-                <div class="item">demo name</div>
-                  <div class="item">demo name demo name</div>
-                   <div class="item">demo name demo name</div>
-                    <div class="item">demo name demo name</div>
-                     <div class="item">demo name demo name</div>
-                <div class="item">demo name demo name</div>
-               
-                <div class="item">demo name demo name</div>
-                <div class="item">demo name demo name</div>
-                <div class="item">demo name</div>
-                <div class="item">demo name</div>
-               
-                <div class="item">demo name</div>
-                <div class="item">demo name</div>
--->
-               
             </div>
            </div>
         </div>
     </div>
-    <!--
-    <div class="container">
-
-        <div class="row">
-            <div class="col-md-12">
-                <div class="brick">
-                    <div class="sigle-brick">
-                        <ul>
-                            <li>Demo name Demo name</li>
-                            <li>Demo name</li>
-                            <li>Demo name Demo name</li>
-                            <li>Demo name</li>
-                            <li>Demo name</li>
-                            <li>Demo name</li>
-                            <li>Demo name</li>
-                            <li>Demo name name</li>
-                            <li>Demo name</li>
-                            <li>Demo name Demo name</li>
-                            <li>Demo name</li>
-                            <li>Demo name</li>
-                            <li>Demo name</li>
-                            <li>Demo name</li>
-                            <li>Demo name Demo name</li>
-                            <li>Demo name</li>
-                            <li>Demo name Demo name</li>
-                            <li>Demo name</li>
-                            <li>Demo name</li>
-                            <li>Demo name Demo name</li>
-                            <li>Demo name</li>
-                            <li>Demo name Demo name</li>
-                            <li>Demo name Demo name</li>
-                            <li>Demo name</li>
-                            <li>Demo name Demo name</li>
-                            <li>Demo name</li>
-                            <li>Demo name</li>
-                            <li>Demo name</li>
-                            <li>Demo name</li>
-                            <li>Demo name name</li>
-                            <li>Demo name</li>
-                            <li>Demo name Demo name</li>
-                            <li>Demo name</li>
-                            <li>Demo name</li>
-                            <li>Demo name</li>
-                            <li>Demo name</li>
-                            <li>Demo name Demo name</li>
-                            <li>Demo name</li>
-                            <li>Demo name Demo name</li>
-                            <li>Demo name</li>
-                            <li>Demo name</li>
-                            <li>Demo name Demo name</li>
-                            <li>Demo name</li>
-                            <li>Demo name Demo name</li>
-
-                        </ul>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
--->
+    
 
 </div>
            <div class="detail-btn text-center" style="margin-top:50px;">
-           <a href="deed.php"><button type="button" class="btns">Add Deed</button></a> 
+           <a href="<?php echo site_url('website/deed');?>"><button type="button" class="btns">Add Deed</button></a> 
                 
 
                </div>

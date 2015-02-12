@@ -76,7 +76,6 @@ class Website extends CI_Controller
         $data["category"]=$this->category_model->getcategorytree(0);
         $this->load->view("frontend",$data);
 	}
-    
         public function search()
         {
             $name=$this->input->get_post('name');
@@ -110,7 +109,19 @@ class Website extends CI_Controller
     public function deeddet()
     {
         $data["page"]="deeddet";
+        $id=$this->input->get('id');
+        $data['walloffame']=$this->walloffame_model->getwalloffamebyid($id);
         $this->load->view("frontend",$data);
     }
+    
+    public function adddeed()
+	{
+        $name=$this->input->post("name");
+        $deed=$this->input->post("deed");
+        $this->walloffame_model->adddeed($name,$deed);
+		$data["page"]="thank";
+        $this->load->view("frontend",$data);
+	}
+    
 }
 ?>

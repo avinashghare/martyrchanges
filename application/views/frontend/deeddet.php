@@ -33,13 +33,13 @@
            </div>
            <div class="col-md-8">
                <div class="detail-text">
-                   <h4>Name :</h4>
+                   <h4>Name : <?php echo $walloffame->name;?></h4>
 
                    
                </div>
                <div class="detail-hist">
                    <h2>Deed :</h2>
-                   <p><?php echo $row->description;?></p>
+                   <p><?php echo $walloffame->deed;?></p>
                </div>
 
            </div>
