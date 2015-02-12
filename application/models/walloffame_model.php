@@ -86,6 +86,14 @@ class Walloffame_model extends CI_Model
 			return  1;
 	}
     
+    public function getallwalloffame($id)
+    {
+        $query=$this->db->query("SELECT * FROM `walloffame`")->result();
+        return $query;
+    }
+    
+    
+    
 	public function getwalloffamebycategory($id)
 	{
 		$query=$this->db->query("SELECT `martyr_martyr`.`id`, `martyr_martyr`.`walloffame`, `martyr_martyr`.`name`, `martyr_martyr`.`rank`, `martyr_martyr`.`unit`, `martyr_martyr`.`homestate`, `martyr_martyr`.`operation`, `martyr_martyr`.`dateofdeath`, `martyr_martyr`.`image`, `martyr_martyr`.`age`, `martyr_martyr`.`description`, `martyr_martyr`.`status`, `martyr_martyr`.`lights`, `martyr_martyr`.`email` ,`walloffame`.`name` AS `walloffamename`,`navigation`.`name` AS `navigationname`
@@ -112,5 +120,6 @@ ORDER BY `walloffame`.`order`")->result();
         );
         return $status;
     }
+    
 }
 ?>

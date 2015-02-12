@@ -48,7 +48,15 @@
         <div class="row">
            <div class="col-md-12">
             <div id="container" class="wall">
-                <div class="item">demo name demo name</div>
+               <?php
+                foreach($walloffame as $row)
+                {
+                ?>
+                <a href="<?php echo site_url('website/deeddet?id=').$row->id;?>"><div class="item"><?php echo $row->name;?></div></a>
+                <?php 
+                }
+                ?>
+<!--
                  <div class="item">demo name demo name  demo name </div>
                   <div class="item">demo name</div>
                 <div class="item">demo name</div>
@@ -65,6 +73,7 @@
                
                 <div class="item">demo name</div>
                 <div class="item">demo name</div>
+-->
                
             </div>
            </div>

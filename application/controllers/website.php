@@ -97,8 +97,7 @@ class Website extends CI_Controller
     public function bricks()
     {
         $data["page"]="bricks";
-//        $data["category"]=$this->category_model->getcategorytree(0);
-//        print_r($data["category"]);
+        $data['walloffame']=$this->walloffame_model->getallwalloffame();
         $this->load->view("frontend",$data);
     }
     public function deed()
