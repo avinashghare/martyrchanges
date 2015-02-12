@@ -119,7 +119,7 @@ class Website extends CI_Controller
         $name=$this->input->post("name");
         $deed=$this->input->post("deed");
         $this->walloffame_model->adddeed($name,$deed);
-		$data["page"]="thank";
+		$data["page"]="thankudeed";
         $this->load->view("frontend",$data);
 	}
     
