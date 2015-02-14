@@ -16,7 +16,7 @@
     <div class="row">
         <div class="col-md-12">
             <div class="links ">
-                <a href="<?php echo site_url('website/index');?>">Home</a>|<a href="<?php echo site_url('website/bricks');?>">Fame</a>
+                <a href="<?php echo site_url('website/index');?>">Home</a>|<a href="<?php echo site_url('website/bricks');?>">Wall Of Fame</a>
 
             </div>
         </div>
@@ -30,8 +30,15 @@
                <?php
                 foreach($walloffame as $row)
                 {
+                    $string=$row->name;
+                    $len=strlen($string);
+                    if($len >= 20)
+                    {
+                        $name = substr($string, 0, 20);
+                        $name=$name."...";
+                    }
                 ?>
-                <a href="<?php echo site_url('website/deeddet?id=').$row->id;?>"><div class="item"><?php echo $row->name;?></div></a>
+                <a href="<?php echo site_url('website/deeddet?id=').$row->id;?>"><div class="item"><?php echo $name;?></div></a>
                 <?php 
                 }
                 ?>

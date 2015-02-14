@@ -88,7 +88,7 @@ class Walloffame_model extends CI_Model
     
     public function getallwalloffame($id)
     {
-        $query=$this->db->query("SELECT * FROM `walloffame`")->result();
+        $query=$this->db->query("SELECT * FROM `walloffame` WHERE `status`=1 ORDER BY `id` DESC")->result();
         return $query;
     }
     

@@ -17,7 +17,7 @@
         <div class="col-md-12">
 
             <div class="links ">
-                <a href="<?php echo site_url('website/index');?>">Home</a>|<a href="<?php echo site_url('website/bricks');?>">Fame</a>
+                <a href="<?php echo site_url('website/index');?>">Home</a>|<a href="<?php echo site_url('website/bricks');?>">Wall Of Fame</a>|<a href="">Thank You</a>
 
 
              
