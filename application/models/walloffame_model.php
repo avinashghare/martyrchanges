@@ -130,6 +130,12 @@ ORDER BY `walloffame`.`order`")->result();
     
     public function adddeed($name,$deed)
     {
+        if($name=="" || $deed=="" )
+        {
+        
+        }
+        else
+        {
         $data=array(
             "name" => $name,
             "deed" => $deed,
@@ -141,6 +147,7 @@ ORDER BY `walloffame`.`order`")->result();
         return  0;
         else
         return  $id;
+        }
     }
 }
 ?>

@@ -18,7 +18,7 @@
 <!--                  <a href="index.html">Home</a>|<a href="regiments.html">Regiments</a>|<a href="detail.html">Martyr Detail</a>-->
 
                
-                  <a href="<?php echo site_url('website/index');?>">Home</a>|<a href="<?php echo site_url('website/regiments?category=').$row->categoryid;?>">Deed</a>|<a href="<?php echo site_url('website/detail?id=').$row->id;?>">Deed Detail</a>
+                  <a href="<?php echo site_url('website/index');?>">Home</a>|<a href="<?php echo site_url('website/deed');?>">Deed</a>|<a href="#">Deed Detail</a>
 
               </div>
           </div>
